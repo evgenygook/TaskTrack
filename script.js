@@ -13,6 +13,10 @@ btn.onclick=function CreateTask(){
     let newTask = document.createElement("tr");
     let newSection = document.createElement("td");
     
-    mainTable.appendChild(newTask).appendChild(newSection).textContent=task.name;
+    let newCell= mainTable.appendChild(newTask);
+    newCell.insertCell(0).textContent=task.name;
+    newCell.insertCell(1).textContent=task.time;
+    newCell.insertCell(2).textContent=task.assigne;
+
 };    
 
