@@ -10,17 +10,14 @@ function CreateTask(){
     task.name = prompt("Название задачи");
     task.time = prompt("Время на задачу");
     task.assigne = prompt("Исполняющее лицо");
-    console.log(task);
-    
-
-    
+      
     let newCell= mainTable.appendChild(newTask);
     newCell.insertCell(0).textContent=task.name;
     newCell.insertCell(1).textContent=task.time;
     newCell.insertCell(2).textContent=task.assigne;
     newCell.insertCell(3).textContent=clockString;
     newCell.insertCell(4).innerHTML="<input type='button' value='Завершить'>";
-       
+   
 };
 
 function createTime(){
@@ -48,6 +45,10 @@ button[0].addEventListener("click", function(event){
     CreateTask();
 })
 
+
+
 function endTime(){
-    this.time = null;
+    button[1].addEventListener("click", function(){
+        button[1].textContent=createTime();
+    });
 }
